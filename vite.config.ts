@@ -18,8 +18,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"), // Ensure correct path resolution
-      name: "CommonHeader",
+      entry: path.resolve(__dirname, "src/index.ts"), 
       formats: ["es", "cjs"],
       fileName: (format) => `common-header.${format}.js`,
     },

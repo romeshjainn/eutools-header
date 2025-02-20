@@ -13,7 +13,7 @@ type HeaderProps = {
   desktopCollapsed?: boolean;
 };
 
-const Header = ({ desktopCollapsed }: HeaderProps) => {
+const HeaderTools = ({ desktopCollapsed }: HeaderProps) => {
   // const UserProfile = useSelector((state: RootState) => state.userProfile);
   const dispatch = useDispatch();
   const getUserProfileDetails = async () => {
@@ -58,4 +58,4 @@ const Header = ({ desktopCollapsed }: HeaderProps) => {
   );
 };
 
-export default Header;
+export default HeaderTools;
