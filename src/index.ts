@@ -1,3 +1,1 @@
-import HeaderTools from "./header";
-
-export { HeaderTools };
+export { default as HeaderTools } from "./header";

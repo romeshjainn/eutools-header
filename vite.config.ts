@@ -7,7 +7,6 @@ export default defineConfig({
   plugins: [
     react(),
     dts({
-      outputDir: "dist",
       insertTypesEntry: true,
     }),
   ],
@@ -18,9 +17,11 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"), 
+      // entry: path.resolve(__dirname, "src/index.ts"),
+      entry: "src/index.ts",
+      name: "EutoolsHeader",
       formats: ["es", "cjs"],
-      fileName: (format) => `common-header.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
       external: ["react", "react-dom", "@mui/material", "@mui/icons-material"],
