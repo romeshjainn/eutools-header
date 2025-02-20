@@ -2,11 +2,11 @@ import { Box } from "@mui/material";
 import HeaderStyled from "./css/headerStyled";
 import * as Comp from "./components/index";
 import Logo from "./components/Logo";
-import { useEffect } from "react";
-import { getUserDetails } from "./api/user";
-import { transformUser } from "./api/transform/transformUser";
-import { useDispatch } from "react-redux";
-import { setUserProfile } from "./redux/reducers/userProfileReducer";
+// import { useEffect } from "react";
+// import { getUserDetails } from "./api/user";
+// import { transformUser } from "./api/transform/transformUser";
+// import { useDispatch } from "react-redux";
+// import { setUserProfile } from "./redux/reducers/userProfileReducer";
 // import { useSelector } from "react-redux";
 // import { RootState } from "@reduxjs/toolkit/query";
 type HeaderProps = {
@@ -15,19 +15,19 @@ type HeaderProps = {
 
 const HeaderTools = ({ desktopCollapsed }: HeaderProps) => {
   // const UserProfile = useSelector((state: RootState) => state.userProfile);
-  const dispatch = useDispatch();
-  const getUserProfileDetails = async () => {
-    try {
-      const response = await getUserDetails();
-      dispatch(setUserProfile(transformUser(response)));
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  // const dispatch = useDispatch();
+  // const getUserProfileDetails = async () => {
+  //   try {
+  //     const response = await getUserDetails();
+  //     dispatch(setUserProfile(transformUser(response)));
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  useEffect(() => {
-    getUserProfileDetails();
-  }, []);
+  // useEffect(() => {
+  //   getUserProfileDetails();
+  // }, []);
 
   return (
     <HeaderStyled>
